@@ -33,7 +33,7 @@ export AWS_SESSION_TOKEN=
 ```
 NB. This is for unix/mac, for windows use `set` instead of `export`.
 
-4. Variables, open `variables.plrvars.hcl` 
+4. Variables, open `variables.auto.pkrvars.hcl` 
 - Change the `region` variable to the region you want your AMI to be present.  
 The default here is `eu-west-3`
 ```
@@ -68,7 +68,7 @@ The configuration is valid.
 
 8. Build your AMI with Packer
 ```
-$ packer build --var-file=variables.pkrvars.hcl aws-ubuntu-nginx.pkr.hcl
+$ packer build .
 
 ubuntu-nginx.amazon-ebs.ubuntu-nginx: output will be in this color.
 
